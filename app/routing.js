@@ -9,7 +9,7 @@
             $stateProvider
                 .state ('dashboard' , {
                     url: '/',
-                    templateUrl: 'app/dashboard/dashboard_template.html'
+                    templateUrl: 'app/controllers/dashboard_template.html'
                 });
 
         });
