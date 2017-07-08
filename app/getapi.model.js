@@ -10,9 +10,13 @@
     function apiGet($resource) {
 
         let api = {
-            apiId : $resource('https://api.foursquare.com/v2/venues/4bf58dd8d48988d16a941735',{name: '@name'})
+            apiId : $resource('https://api.foursquare.com/v2/venues/search?v=20161016&ll=41.878114%2C%20-87.629798&query=coffee&intent=checkin&client_id=AKQNZODERYZOMZKGMRGKOQLYGDXQCQPKTY3LS5QCPDEEJ3VK&client_secret=RO1TAM5TEW2GKM54LLC2VSYQEM5JOJOILVKQXMFNZ2A1V4YT',{id: '@id'})
         }
+
     return api;
+
     };
 
 })();
+
+
