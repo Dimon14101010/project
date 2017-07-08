@@ -8,7 +8,7 @@
             return {
                 restrict: 'E',
                 transclude: true,
-                templateUrl: "app/directives/topmenu.template.html",
+                templateUrl: "app/directives/topmenu.html",
                 controller: 'TopMenuCtrl',
                 controllerAs: 'topVm'
             }

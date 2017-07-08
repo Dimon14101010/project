@@ -5,12 +5,18 @@
     <title>Title</title>
 </head>
 <body ng-app="app">
+<div class="container-fluid">
 
-<div>
-    hello world
+    <top-menu>
+        <div class="col-xs-1">
+            <img width="50" src="http://shmector.com/_ph/1/349279667.jpg" alt="Logo">
+        </div>
+    </top-menu>
+
+    <ui-view></ui-view>
+
 </div>
-<ui-view></ui-view>
-<dashboard></dashboard>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
@@ -19,7 +25,9 @@
 <script src="app/app.core.js"></script>
 <script src="app/routing.js"></script>
 <script src="app/controllers/dashboard.controller.js"></script>
+<script src="app/controllers/topmenu.controller.js"></script>
 <script src="app/getapi.model.js"></script>
 <script src="app/directives/dashboard.directive.js"></script>
+<script src="app/directives/topmenu.directive.js"></script>
 </body>
 </html>

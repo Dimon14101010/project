@@ -7,7 +7,7 @@
 
     TopMenuCtrl.$inject =['$resource'];
 
-    function DashboardCtrl(TopMenuCtrl) {
+    function TopMenuCtrl() {
 
 
 
