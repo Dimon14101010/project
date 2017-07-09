@@ -1,6 +1,15 @@
-<div ng-repeat="objects in vm.model.apiResponse">
-    {{objects.venues}}
+<div ng-repeat="venue in vm.model.apiResponse.response.venues | limitTo : 100" style="background-color: aquamarine; padding: 10px;margin: 10px; display: inline-table;">
+
+    <h3>{{venue.name}}</h3> <h5>адрес :{{venue.location.address}}</h5>
+    {{venue.id}}
+    <div ng-repeat="photos in vm.model.apiResponsePhoto.response.photos.items | limitTo:3" style="display: inline;">
+<img ng-src="{{photos.prefix}}50x50{{photos.suffix}}" title="picture here">
+    </div>
 
 </div>
 
 <div>I AM dashboard</div>
+
+<pre>
+    {{vm.model.apiResponsePhoto.response.photos | json}}
+</pre>
