@@ -2,9 +2,9 @@
 
     <h3>название: {{venue.venue.name}}</h3> <h5>адрес :{{venue.venue.location.address}}</h5>
     {{venue.id}}
-    <div ng-repeat="photos in vm.model.apiResponse.response.groups[0].items | limitTo:3" style="display: inline;">
-<img ng-src="{{photos.venue.categories[0].icon.prefix}}50x50{{photos.venue.categories[0].icon.suffix}}" title="picture here">
-        {{photos.venue.categories[0].name}}
+    <div style="background-color: crimson" ng-repeat="photos in vm.model.apiResponse.response.groups[0].items[0].venue.categories | limitTo:3" style="display: inline;">
+<img ng-src="{{photos.icon.prefix}}100x50{{photos.icon.suffix}}" title="picture here">
+        {{photos.icon.prefix}}{{photos.icon.suffix}}
     </div>
 
 </div>
@@ -12,7 +12,7 @@
 <div>I AM dashboard</div>
 
 <pre>
-    {{vm.model.apiResponse.response.groups[0].items.venue | json}}
+    {{vm.model.apiResponse.response.groups[0].items[0].venue.categories[0].icon | json}}
 
 
 </pre>
