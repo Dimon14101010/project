@@ -14,8 +14,8 @@
         vm.model = {
 
             apiResponse: apiGet.apiId.get(),
-            apiGetIdPhoto : apiGet.apiId.get.response.venues(),
-            apiResponsePhoto : apiGet.apiPhoto.get({id : apiGetIdPhoto.id})
+
+            apiResponsePhoto : apiGet.apiPhoto.get()
         };
 
     };

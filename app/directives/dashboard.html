@@ -1,9 +1,10 @@
-<div ng-repeat="venue in vm.model.apiResponse.response.venues | limitTo : 100" style="background-color: aquamarine; padding: 10px;margin: 10px; display: inline-table;">
+<div ng-repeat="venue in vm.model.apiResponse.response.groups[0].items" style="background-color: aquamarine; padding: 10px;margin: 10px; display: inline-table;">
 
-    <h3>{{venue.name}}</h3> <h5>адрес :{{venue.location.address}}</h5>
+    <h3>название: {{venue.venue.name}}</h3> <h5>адрес :{{venue.venue.location.address}}</h5>
     {{venue.id}}
-    <div ng-repeat="photos in vm.model.apiResponsePhoto.response.photos.items | limitTo:3" style="display: inline;">
-<img ng-src="{{photos.prefix}}50x50{{photos.suffix}}" title="picture here">
+    <div ng-repeat="photos in vm.model.apiResponse.response.groups[0].items[0].venue.categories | limitTo:3" style="display: inline;">
+<img ng-src="{{photos.venue.categories[0].icon.prefix}}50x50{{photos.venue.categories[0].icon.suffix}}" title="picture here">
+        {{photos.id}}
     </div>
 
 </div>
@@ -11,5 +12,7 @@
 <div>I AM dashboard</div>
 
 <pre>
-    {{vm.model.apiResponsePhoto.response.photos | json}}
+    {{vm.model.apiResponse.response.groups[0].items[0].venue.categories[0].id | json}}
+
+
 </pre>
