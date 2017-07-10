@@ -1,10 +1,10 @@
 <div ng-repeat="venue in vm.model.apiResponse.response.groups[0].items" style="background-color: aquamarine; padding: 10px;margin: 10px; display: inline-table;">
 
     <h3>название: {{venue.venue.name}}</h3> <h5>адрес :{{venue.venue.location.address}}</h5>
-    {{venue.venue.photos.groups[0].items[0]}}
-    <div style="background-color: crimson" ng-repeat="photo in venue.venue.photos.groups[0].items" style="display: inline;">
-<img ng-src="{{photo.prefix}}100x50{{photo.suffix}}" title="picture here">
-        {{photos.icon.prefix}}{{photos.icon.suffix}}
+
+    <div style="background-color: crimson" ng-repeat="photo in vm.model.apiResponse.response.groups[0].items[0].itsPhotos.response.photos.items | limitTo:3" style="display: inline;">
+<img ng-src="{{photo.prefix}}100x100{{photo.suffix}}" title="picture here">
+        {{photo.id}}proverka tut{{photo.suffix}}
     </div>
 
 </div>
@@ -13,8 +13,13 @@
 
 <pre>
 
-    {{vm.model.apiResponse.response.groups[0].items  | json}}
-    {{vm.model.apiResponse.response.groups[0].items[0].venue.photos.groups[0].items[0] | json}}
 
+
+
+</pre>
+PROVERKA
+<pre>
+
+    {{vm.model.apiResponse.response.groups[0].items[0].itsPhotos.response.photos.items | json}}
 
 </pre>
