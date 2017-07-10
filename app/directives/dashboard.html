@@ -5,8 +5,11 @@
     <img ng-src="{{venue.itsPhotos.response.photos.items[0].prefix}}100x100{{venue.itsPhotos.response.photos.items[0].suffix}}" title="picture here">
     <img ng-src="{{venue.itsPhotos.response.photos.items[1].prefix}}100x100{{venue.itsPhotos.response.photos.items[1].suffix}}" title="picture here">
     <img ng-src="{{venue.itsPhotos.response.photos.items[2].prefix}}100x100{{venue.itsPhotos.response.photos.items[2].suffix}}" title="picture here">
-
-
+<div>
+    comments:
+    <img ng-src="{{venue.tips[0].user.photo.prefix}}30x30{{venue.tips[0].user.photo.suffix}}">
+<span>{{venue.tips[0].text}}</span>
+</div>
 </div>
 
 <div>I AM dashboard</div>
@@ -20,6 +23,6 @@
 PROVERKA
 <pre>
 
-    {{vm.model.apiResponse.response.groups[0].items[0].itsPhotos.response.photos.items | json}}
+    {{vm.model.apiResponse.response.groups[0].items | json}}
 
 </pre>
