@@ -2,10 +2,10 @@
 
     <h3>название: {{venue.venue.name}}</h3> <h5>адрес :{{venue.venue.location.address}}</h5>
 
-    <div style="background-color: crimson" ng-repeat="photo in vm.model.apiResponse.response.groups[0].items[0].itsPhotos.response.photos.items | limitTo:3" style="display: inline;">
-<img ng-src="{{photo.prefix}}100x100{{photo.suffix}}" title="picture here">
-        {{photo.id}}proverka tut{{photo.suffix}}
-    </div>
+    <img ng-src="{{venue.itsPhotos.response.photos.items[0].prefix}}100x100{{venue.itsPhotos.response.photos.items[0].suffix}}" title="picture here">
+    <img ng-src="{{venue.itsPhotos.response.photos.items[1].prefix}}100x100{{venue.itsPhotos.response.photos.items[1].suffix}}" title="picture here">
+    <img ng-src="{{venue.itsPhotos.response.photos.items[2].prefix}}100x100{{venue.itsPhotos.response.photos.items[2].suffix}}" title="picture here">
+
 
 </div>
 
